@@ -1,30 +1,46 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "It's all about Translation"
 date:   2019-09-09 13:51:22 +0200
 categories: jekyll update
 ---
 
+Maybe you're starting to learn coding but you are confused how many programming languages are out there. Which one to pick? What are the differences? Everyone is recommenting enthusiastically a different one. And then you hear that all of those languges can even be translated into eachother. And that confuses even more. Aren't they then all the same in the end? This post tries to give an overview of how programming languages relate to the actual hardware they're running on. Because this is an important point they differ in. 
+
+
+# Hardware vs. Software
+
 When writing or running a computer program there are always those two parts involved: the hardware and the software. And there is a very interesting interface that translates what is described in software into it's execution on the actual hardware.
 
-Hardware is usually some memory (RAM and harddrive) and some CPU that can manipulate this memory based on instructions. Even though nowadays the concrete hardware implementations are based on electronics, the mechanism can also be described as a theoretical model: The [turing machine](https://en.wikipedia.org/wiki/Turing_machine). It's an <cite>".. abstract machine, which manipulates symbols on a strip of tape according to a table of rules"</cite> (Wikipedia). It turned out that every computer program (software)  can be described as a turing machine regardless of it's concrete implementation. Fun meta fact: There's even a complete [turing machine implementation in minecraft](https://www.youtube.com/watch?v=1X21HQphy6I).
-It also turned out that this separation between memory (tape in the turing model) on the one hand and the instruction set on the other hand can be dissolved. The actual instructions can be encoded on the memory, too. This is then called an universal turing machine. "This principle is considered to be the origin of the idea of a stored-program computer used by John von Neumann in 1946 [..] that now bears von Neumann's name: the von Neumann architecture." And mostly all of today's computer's happen to be designed by this principle.
+Hardware is usually some memory (RAM and harddrive) and some CPU that can manipulate this memory based on instructions. Even though nowadays the concrete hardware implementations are based on electronics, the mechanism can also be described as a theoretical model: The [turing machine](https://en.wikipedia.org/wiki/Turing_machine). It's an <cite>".. abstract machine, which manipulates symbols on a strip of tape according to a table of rules"</cite> (Wikipedia). It turned out that every computer program (software)  can be described as a turing machine regardless of it's concrete implementation. A turing machine can be built from silcon, wood or: Fun meta fact: There's even a complete [turing machine implementation in minecraft](https://www.youtube.com/watch?v=1X21HQphy6I).
+It also turned out that this separation between memory (tape in the turing model) on the one hand and the instruction set (table) on the other hand can be dissolved. The actual instructions can be encoded on the memory, too. This is then called an universal turing machine. "This principle is considered to be the origin of the idea of a stored-program computer used by John von Neumann in 1946 [..] that now bears von Neumann's name: the von Neumann architecture." And mostly all of today's computer's happen to be designed by this principle.
 
 Of course it's interesting to look into the electronics, the bare metal side of computing. But on the other hand it's also a reasonable place to make a cut. Reasoning about software can be completely independent from the hardware.
 
+
+# Low Level Languages
+
 On the software side technologies are stacked on top of eachother. That means that there is a very low level part that communicates directly with the hardware and there are a number of abstractions on top of that. The lowest level is the actual machine code and it's different for every CPU. "Every processor or processor family has its own instruction set." (Wikipedia). "..Machine code is a strictly numerical language [...], and may be regarded as the lowest-level representation of a [...] computer program." (Wikipedia)
-An example for machine code would be "00000101", theoretically any program can be written in that form but practically no human can reason about this numbers. That's why the assembly language was invented to give a thin and more human readable layer on top of it. It is also CPU independent. Assembly language "..is any low-level programming language in which there is a very strong correspondence between the instructions in the language and the architecture's machine code instructions. Assembly language may also be called symbolic machine code." (Wikipedia)
+An example for machine code would be `00000101`, theoretically any program can be written in that form but practically no human can reason about this numbers. That's why the assembly languages where invented to give a thin and more human readable layer on top. They are also CPU independent. Assembly language "..is any low-level programming language in which there is a very strong correspondence between the instructions in the language and the architecture's machine code instructions. Assembly language may also be called symbolic machine code." (Wikipedia)
+
 Example in assembly:
 ```
 MOV AL, 1h
 MOV CL, 2h
 MOV DL, 3h
 ```
+
 Again, any program can be written in assembly language but it's still extremely unpractical for complex applications. Maybe a hardware driver is still written in assembly nowadays, but any more complex application would be written in a language that adds another layer on top to make it more suitable for humans to write and read.
 
 C for example is prominent as it's still very close to the imperative machine instructions it translates to. "By design, C provides constructs that map efficiently to typical machine instructions and has found lasting use in applications previously coded in assembly language." (Wikipedia)
 
-And there are a myriad of different languages that add more helpful constructs and abstractions, all of them finally being translated to one of those low level forms. The features on top are: Functions, Objects, Classes and much more. Coming back to the qustion: Which language should I learn as a beginner. In a way it's reasonable to go for a very low level language, as this is something the more high level languages translate to anyways.
+# High level languages: The imperative way
+
+And there are a myriad of different languages that add more helpful constructs and abstractions, all of them finally being translated to one of those low level forms, sometimes directly and sometimes with many inbetween steps. The features on top are: Functions, Objects, Classes and much more. This new layers where labeled first structured programming, later object oriented programming. It's about using more graspable and nested structures to model more real world entities within the languge.  
+
+  Coming back to the qustion: Which language should I learn as a beginner. In a way it's reasonable to go for a very low level language, as this is something the more high level languages translate to anyways.
+
+# High level languages: The declarative way
 
 Another way of looking at the problem is to start thinking about the problem from the other end of the chain. One could ask: Which notatation or ruleset can we use to describe a computer program. And even more: How can we maximize our confidence that programs written in this way behave correctly. The more low level your language is the more likely it is that you make and oversee mistakes. Computers are good at repetive tasks, humans not so much. Languages like C, C++, C#, Java, Python can be regarded as powerful and convenient abstractions on top of a turing machine but they still stick to the underlying paradigm: imperative instructions.
 
@@ -37,6 +53,8 @@ Since those problems get better and better solutions, functional programming is 
 
 So the other way of looking at the problem is: Ask first: How can I best model programs. And second: How can that be fed into a real computer. Maybe the fact that the underlying machines follow the "Von Neumann" architecture is not set in stone. See this canonical article by John Backus on this topic: "Can Programming Be Liberated from the von Neumann Style? A Functional Style and Its Algebra of Programs" (http://www.thocp.net/biographies/papers/backus_turingaward_lecture.pdf)
 Maybe the necessary translation is more arbitrary than we need to assume.
+
+# So what should I learn?
 
 However, all those aspects and also different layers will play a role in modern real world software development. And I think it makes sense to learn some bits of each. It's not bad to know about some language that's close to the machine. Also it's quite helpful to look at a language that does not care about this too much. Looking at the "turing machine" and "lambda calculus" will help to increase the understanding in a language independent way. And there are also some interesting meta/cross exercises: Like implement an Universal Turing Machine in a high level functional language. Or: Implement a LISP (that's based on the lambda calculus) in an imperative language like python or C: http://buildyourownlisp.com/ .  
 But why those exercises for things that have been already done. Fair point, never reinvent the wheel. But in the end, translating something lower level to something higher level (or vice versa) is what you will encounter when writing every non trivial piece of software. Usually the lowest level of your project is the language you use. Then you will use some libraries that provide you an easy interface for things you don't want or cannot implement yourself. And even inside your code base, you may design some parts as if they where libraries for your very specific problem domain. Ideally you'd do so in a very composable and reusable way. This is like inventing a higher language inside the language you are using. And maybe this even happens in separated steps which build on top of each other. This is also sometimes referred to as the "onion model". The core of your program can then be just the an composition and application of those building blocks. So maybe it's less the question of "Which language should I use" and more: Which strategies and practices do I use to achieve conversions between the different levels of abstraction.
