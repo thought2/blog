@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>It’s all about Translation | Thought2 Blog</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="It’s all about Translation" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Maybe you’re starting to learn coding but you are confused how many programming languages are out there. Which one to pick? What are the differences? Everyone is recommending enthusiastically a different one. And then you hear that all of those languages can even be translated into each other. And that confuses even more. Aren’t they then all the same in the end? This post tries to give an overview of how programming languages may differ. Especially of how they relate to the actual hardware they’re running on." />
+<meta property="og:description" content="Maybe you’re starting to learn coding but you are confused how many programming languages are out there. Which one to pick? What are the differences? Everyone is recommending enthusiastically a different one. And then you hear that all of those languages can even be translated into each other. And that confuses even more. Aren’t they then all the same in the end? This post tries to give an overview of how programming languages may differ. Especially of how they relate to the actual hardware they’re running on." />
+<link rel="canonical" href="/jekyll/update/2019/09/16/its-all-about-translation.html" />
+<meta property="og:url" content="/jekyll/update/2019/09/16/its-all-about-translation.html" />
+<meta property="og:site_name" content="Thought2 Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-09-16T13:51:22+02:00" />
+<script type="application/ld+json">
+{"description":"Maybe you’re starting to learn coding but you are confused how many programming languages are out there. Which one to pick? What are the differences? Everyone is recommending enthusiastically a different one. And then you hear that all of those languages can even be translated into each other. And that confuses even more. Aren’t they then all the same in the end? This post tries to give an overview of how programming languages may differ. Especially of how they relate to the actual hardware they’re running on.","@type":"BlogPosting","headline":"It’s all about Translation","dateModified":"2019-09-16T13:51:22+02:00","url":"/jekyll/update/2019/09/16/its-all-about-translation.html","datePublished":"2019-09-16T13:51:22+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"/jekyll/update/2019/09/16/its-all-about-translation.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Thought2 Blog" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Thought2 Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">It&#39;s all about Translation</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-09-16T13:51:22+02:00" itemprop="datePublished">Sep 16, 2019
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Maybe you’re starting to learn coding but you are confused how many programming languages are out there. Which one to pick? What are the differences? Everyone is recommending enthusiastically a different one. And then you hear that all of those languages can even be translated into each other. And that confuses even more. Aren’t they then all the same in the end? This post tries to give an overview of how programming languages may differ. Especially of how they relate to the actual hardware they’re running on.</p>
+
+<h1 id="hardware-vs-software">Hardware vs. Software</h1>
+
+<p>When writing or running a computer program there are always those two parts involved: the hardware and the software. And there is a very interesting interface that translates what is described in software into it’s execution on the actual hardware.</p>
+
+<p>Hardware is usually some memory (RAM and hard drive) and some CPU that can manipulate this memory based on instructions. Even though nowadays the concrete hardware implementations are based on electronics, the mechanism can also be described as a theoretical model: The <a href="https://en.wikipedia.org/wiki/Turing_machine">Turing machine</a>. It’s an <cite>”.. abstract machine, which manipulates symbols on a strip of tape according to a table of rules”</cite> (Wikipedia). It turned out that every computer program (software)  can be described as a Turing machine regardless of it’s concrete implementation. A Turing machine can be built from silicon, wood or: Fun meta fact: There’s even a complete <a href="https://www.youtube.com/watch?v=1X21HQphy6I">Turing machine implementation in mine craft</a>.
+It also turned out that this separation between memory (tape in the Turing model) on the one hand and the instruction set (table) on the other hand can be dissolved. The actual instructions can be encoded on the memory, too. This is then called an universal Turing machine. <cite>“This principle is considered to be the origin of the idea of a stored-program computer used by John von Neumann in 1946 [..] that now bears von Neumann’s name: the von Neumann architecture.”</cite> And mostly all of today’s computer’s happen to be designed by this principle.</p>
+
+<p>Of course it’s interesting to look into the electronics, the bare metal side of computing. But on the other hand it’s also a reasonable place to make a cut. Reasoning about software can be completely independent from the hardware.</p>
+
+<h1 id="low-level-languages">Low Level Languages</h1>
+
+<p>On the software side technologies are stacked on top of each other. That means that there is a very low level part that communicates directly with the hardware and there are a number of abstractions on top of that. The lowest level is the actual machine code and it’s different for every CPU. <cite>“Every processor or processor family has its own instruction set.”</cite> (Wikipedia). <cite>”..Machine code is a strictly numerical language […], and may be regarded as the lowest-level representation of a […] computer program.”</cite> (Wikipedia)
+An example for machine code would be <code class="highlighter-rouge">00000101</code>, theoretically any program can be written in that form but practically no human can reason about this numbers. That’s why the assembly languages where invented to give a thin and more human readable layer on top. They are also CPU independent. Assembly language <cite>”..is any low-level programming language in which there is a very strong correspondence between the instructions in the language and the architecture’s machine code instructions. Assembly language may also be called symbolic machine code.”</cite> (Wikipedia)</p>
+
+<p>Example in assembly:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MOV AL, 1h
+MOV CL, 2h
+MOV DL, 3h
+</code></pre></div></div>
+
+<p>Again, any program can be written in assembly language but it’s still extremely unpractical for complex applications. Maybe a hardware driver is still written in assembly nowadays, but any more complex application would be written in a language that adds another layer on top to make it more suitable for humans to write and read.</p>
+
+<p>C for example is prominent as it’s still very close to the imperative machine instructions it translates to. <cite>“By design, C provides constructs that map efficiently to typical machine instructions and has found lasting use in applications previously coded in assembly language.”</cite> (Wikipedia)</p>
+
+<h1 id="high-level-languages-the-imperative-way">High level languages: The imperative way</h1>
+
+<p>And there are a myriad of different languages that add more helpful constructs and abstractions, all of them finally being translated to one of those low level forms, sometimes directly and sometimes with many in between steps. The features on top are: Functions, Objects, Classes and much more. This new layers where labeled first structured programming, later object oriented programming. It’s about using more graspable and nested structures to model more real world entities within the language.</p>
+
+<p>Coming back to the question: Which language should I learn as a beginner. In a way it’s reasonable to go for a very low level language, as this is something the more high level languages translate to anyways.</p>
+
+<h1 id="high-level-languages-the-declarative-way">High level languages: The declarative way</h1>
+
+<p>Another way of looking at the problem is to start thinking about the problem from the other end of the chain. One could ask: Which notation or rule set can we use to describe a computer program. And even more: How can we maximize our confidence that programs written in this way behave correctly. The more low level your language is the more likely it is that you make and oversee mistakes. Computers are good at repetitive tasks, humans not so much. Languages like C, C++, C#, Java, Python can be regarded as powerful and convenient abstractions on top of a Turing machine but they still stick to the underlying paradigm: imperative instructions.</p>
+
+<p>There is another computational model which does not have that immediate 1:1 correlation to the actual hardware internals. It’s the lambda calculus. From Wikipedia: Lambda calculus <cite>“is a formal system […] for expressing computation based on function abstraction and application using variable binding and substitution.”</cite>. Like Turing machines the lambda calculus can be used to describe every possible program.
+Lambda calculus is a very simple set of rules, the advantage over a Turing machine is that more composable and predictable. It does not focus much on how and when things are done but more on what should be done. It’s more declarative than imperative. Purely functional languages like <code class="highlighter-rouge">Haskell</code>, <code class="highlighter-rouge">Elm</code> or <code class="highlighter-rouge">PureScript</code> are implementations of the lambda calculus. A lambda (a function) that is fed with the same arguments is guaranteed to always return the same result. No matter when or even if the actual function was ‘executed’. Based on this simple guarantee more complex ones can be derived. Having this key concept as the very basis of the language gives you a very powerful way to tell if your program behaves correctly or not.</p>
+
+<p>However, this way of thinking about computation is admittedly quite far away from the way today’s computers work. And that’s why you need a quite complex layer that tries to translate something lambda calculus based into real machine instructions. Functional programming is researched on since more than 50 years. And for a long time it was said to be very powerful but not really practical because the gained safety came with the cost of less performance. During the last decades this changed a lot. More and more efficient ways where discovered to implement functional languages efficiently. And because of their guarantees they can be analyzed quite well. This even leads to implementations that outperform the imperative ones. E.g. the functional ClojureScript wrapper around React turned out to be faster than React itself.</p>
+
+<p>Since those problems get better and better solutions, functional programming is entering more and more into mainstream programming languages. In reality most languages nowadays don’t follow one paradigm (like imperative, object oriented, functional) but provide some mix of them. Languages that where originally intended to be e.g. object oriented, like Java, are getting more functional constructs in their more recent versions. JavaScript is a bit of an exception. As it already has quite some functional and also object oriented properties baked in its implementation. But the emphasis on the functional ones is increasing: Famous libraries like Redux, React, Lodash are good examples for this.</p>
+
+<p>So the other way of looking at the problem is: Ask first: How can I best model programs. And second: How can that be fed into a real computer. Maybe the fact that the underlying machines follow the “Von Neumann” architecture is not set in stone. See this canonical article by John Backus on this topic: <a href="http://www.thocp.net/biographies/papers/backus_turingaward_lecture.pdf">“Can Programming Be Liberated from the von Neumann Style? A Functional Style and Its Algebra of Programs”</a>
+Maybe the necessary translation is more arbitrary than we need to assume.</p>
+
+<h1 id="so-what-should-i-learn">So what should I learn?</h1>
+
+<p>However, all those aspects and also different layers will play a role in modern real world software development. And I think it makes sense to learn some bits of each. It’s not bad to know about some language that’s close to the machine. Also it’s quite helpful to look at a language that does not care about this too much. Looking at the “Turing machine” and “lambda calculus” will help to increase the understanding in a language independent way. And there are also some interesting meta/cross exercises: Like implement an Universal Turing Machine in a high level functional language. Or: Implement a LISP (that’s based on the lambda calculus) <a href="http://buildyourownlisp.com/">in an imperative language like python or C</a> .
+But why those exercises for things that have been already done. Fair point, never reinvent the wheel. But in the end, translating something lower level to something higher level (or vice versa) is what you will encounter when writing every non trivial piece of software. Usually the lowest level of your project is the language you use. Then you will use some libraries that provide you an easy interface for things you don’t want or cannot implement yourself. And even inside your code base, you may design some parts as if they where libraries for your very specific problem domain. Ideally you’d do so in a very composable and reusable way. This is like inventing a higher language inside the language you are using. And maybe this even happens in separated steps which build on top of each other. This is also sometimes referred to as the “onion model”. The core of your program can then be just the an composition and application of those building blocks. So maybe it’s less the question of “Which language should I use” and more: Which strategies and practices do I use to achieve conversions between the different levels of abstraction.</p>
+
+  </div><a class="u-url" href="/jekyll/update/2019/09/16/its-all-about-translation.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Thought2 Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Thought2 Blog</li><li><a class="u-email" href="mailto:me@thought2.de">me@thought2.de</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/thought2"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">thought2</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
