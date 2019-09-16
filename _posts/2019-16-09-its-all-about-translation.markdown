@@ -2,7 +2,7 @@
 layout: post
 title:  "It's all about Translation"
 date:   2019-09-16 13:51:22 +0200
-categories: jekyll update
+categories: 
 ---
 
 Maybe you're starting to learn coding but you are confused how many programming languages are out there. Which one to pick? What are the differences? Everyone is recommending enthusiastically a different one. And then you hear that all of those languages can even be translated into each other. And that confuses even more. Aren't they then all the same in the end? This post tries to give an overview of how programming languages may differ. Especially of how they relate to the actual hardware they're running on.
