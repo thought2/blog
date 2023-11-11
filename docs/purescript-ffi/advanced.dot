@@ -1,0 +1,14 @@
+digraph G {
+  node [shape="box3d"; fontname="Arial"];
+  
+  edge [fontsize=10; fontname="Arial"; arrowsize=0.5];
+
+  "src/Main.js" -> "src/Main.purs" [label="import JS values"]
+  
+  
+  "src/Main.purs" -> "output/Main/index.d.ts" [label="generate TS types"; style="dashed"]
+  
+  
+  "output/Main/index.d.ts" -> "src/Main.js" [label="import TS types"]
+  
+}
