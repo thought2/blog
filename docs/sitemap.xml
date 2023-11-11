@@ -4,6 +4,10 @@
         <loc>https://example.com/</loc>
     </url>
     <url>
+        <loc>https://example.com/page/1/</loc>
+    </url>
+    <url>
         <loc>https://example.com/purescript-ffi/</loc>
+        <lastmod>2023-10-20</lastmod>
     </url>
 </urlset>

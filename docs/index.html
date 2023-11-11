@@ -1,129 +1,194 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="referrer" content="no-referrer-when-downgrade">
+<!doctype html>
+<html class="not-ready lg:text-base" lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <title></title>
-    <meta name="description" content="">
-
-    <link rel="stylesheet" href="https://example.com/main.css">
-
+  <!-- Title -->
+  <title>
     
+  </title>
 
-    
-    
-</head>
-<body>
-    <a class="skip-main" href="#main">Skip to content</a>
-    <div class="container">
-        <header> 
-            <h1 class="site-header">
-                <a href="https:&#x2F;&#x2F;example.com"></a>
-            </h1>
-            <nav>
-                
-                
-                
-            </nav>
-        </header>
-        <main id="main" tabindex="-1">
-            
-                
-                
-                    
-    <article class="post-list">
-        <header> 
-            <h1>
-                <a href="https:&#x2F;&#x2F;example.com&#x2F;purescript-ffi&#x2F;">A step by step guide to make foreign functions less foreign</a>
-            </h1>
-        </header>
+  <!-- Meta -->
+  <meta name="theme-color" />
 
-        
-        
-        
-    <div class="article-info">
-        
-        <div class="article-taxonomies">
-            
-            
-        </div>
-    </div>
+  <!-- Author -->
+  
+  <meta name="description" content="A personal blog" />
+  <meta name="author" content="" />
+  
 
-    </article>
-
-                
-                
-            
-        </main>
-        <footer>
-            <p>
-                ©  2023<br>
-                Powered by <a target="_blank" href="https://getzola.org/">Zola</a>, Theme <a target="_blank" href="https://github.com/zbrox/anpu-zola-theme">Anpu</a>.
-            </p>
-            <p>
-                
-                
-            </p>
-        </footer>
-    </div>
-
-    <div class="dark-mode-buttons">
-  <button class="dark-mode-button" id="dark-mode-on">
-    <img
-      src="https://example.com/dark_mode.svg"
-      width="24"
-      height="24"
-      alt="Dark mode"
-      aria-label="dark mode toggle"
-      title="Dark mode"
-    />
-  </button>
-  <button class="dark-mode-button" id="dark-mode-off">
-    <img
-      src="https://example.com/light_mode.svg "
-      width="24"
-      height="24"
-      alt="Light mode"
-      aria-label="light mode toggle"
-      title="Light mode"
-      style="filter: invert(1);"
-    />
-  </button>
-</div>
-<script>
-  const cls = document.body.classList;
-  const getSessionTheme = sessionStorage.getItem("theme");
-  if (getSessionTheme === "dark") {
-    cls.toggle("dark-mode", true);
-  } else if (getSessionTheme === "light") {
-    cls.toggle("dark-mode", false);
-  } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    cls.toggle("dark-mode", true);
-  }
-  document
-    .getElementById("dark-mode-on")
-    .addEventListener("click", function (e) {
-      cls.toggle("dark-mode", true);
-      sessionStorage.setItem("theme", "dark");
-    });
-  document
-    .getElementById("dark-mode-off")
-    .addEventListener("click", function (e) {
-      cls.toggle("dark-mode", false);
-      sessionStorage.setItem("theme", "light");
-    });
-</script>
-<noscript>
+  <!-- CSS & JS -->
+  <link rel="preload stylesheet" as="style" href="https://example.com/main.css" />
   <style>
-    .dark-mode-buttons {
-      display: none;
+    :root {
+      --bg: #f4f4f5;
+      --bg-dark: #18181b;
+      --header: #e4e4e7;
+      --header-dark: #27272a;
     }
   </style>
-</noscript>
 
+  
+  <!-- Avatar -->
+  
+
+  <!-- Social List -->
+  
+  <!---->
+  
+
+  <!-- Dark Icon -->
+  <link rel="preload" as="image" href="https://example.com/icons/theme.svg" />
+
+  <!-- Math -->
+  
+  <!---->
+
+  <!-- Mermaid -->
+  
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://example.com/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://example.com/apple-touch-icon.png" />
+
+  <!-- Feeds -->
+  
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https:&#x2F;&#x2F;example.com" />
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header
+  class="header fixed top-0 z-40 mx-auto min-h-[3.5rem] w-full"
+>
+  <div class="mx-auto w-full max-w-4xl p-3 lg:flex lg:justify-between">
+    <div class="flex justify-between">
+      <div class="flex items-center">
+        <a class="text-2xl font-semibold" href="https://example.com"></a>
+        <div
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] [background:url(./icons/theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+          role="button"
+          aria-label="Dark"
+        ></div>
+      </div>
+      
+    </div>
+    <script>
+      // base
+      const htmlClass = document.documentElement.classList;
+      setTimeout(() => {
+        htmlClass.remove("not-ready");
+      }, 10);
+
+      // mobile menu
+      const btnMenu = document.querySelector(".btn-menu");
+      btnMenu.addEventListener("click", () => {
+        htmlClass.toggle("open");
+      });
+
+      // dark theme
+      const setDark = (isDark) => {
+        htmlClass[isDark ? "add" : "remove"]("dark");
+        localStorage.setItem("dark", isDark);
+      };
+
+      // init
+      const darkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+      if (htmlClass.contains("dark")) {
+        setDark(true);
+      } else {
+        const darkVal = localStorage.getItem("dark");
+        setDark(darkVal ? darkVal === "true" : darkScheme.matches);
+      }
+
+      // listen system
+      darkScheme.addEventListener("change", (event) => {
+        setDark(event.matches);
+      });
+
+      // manual switch
+      const btnDark = document.querySelector(".btn-dark");
+      btnDark.addEventListener("click", () => {
+        setDark(localStorage.getItem("dark") !== "true");
+      });
+    </script>
     
-</body>
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-4 pb-16 pt-32 dark:prose-invert"
+    >
+      
+
+      <!-- avatar -->
+      <!---->
+      <!---->
+      <!---->
+
+      <!-- Pages -->
+<!---->
+<!---->
+<!---->
+
+
+<section
+  class="block-bg relative mb-4 rounded-lg p-4 first-of-type:mt-0 last-of-type:mb-0 active:scale-95 lg:mb-6 lg:p-6"
+>
+  <h2 class="!my-0 pb-1 font-bold !leading-none">How to make PureScript&#x27;s foreign Functions less foreign</h2>
+
+  <div class="not-prose my-1 truncate">
+    
+    <p>Lorem Ipsum Dolor Si Amet</p>
+    
+  </div>
+
+  <div class="text-sm antialiased opacity-60">
+  
+  <time>2023-10-20</time>
+  <span class="mx-1">&middot;</span>
+  <span>11min</span>
+  <!---->
+  
+  <!---->
+  
+</div>
+
+
+  <a class="absolute inset-0 text-[0]" href="https:&#x2F;&#x2F;example.com&#x2F;purescript-ffi&#x2F;">How to make PureScript&#x27;s foreign Functions less foreign</a>
+</section>
+
+
+<!-- Main Nav -->
+
+<nav class="mt-16 flex">
+  <!---->
+  
+</nav>
+
+<!---->
+      
+    </main>
+
+    <footer class="mx-auto flex max-w-3xl flex-wrap items-center px-8 py-4 text-sm opacity-60">
+  <div class="mr-auto basis-full lg:basis-1/2">
+    &copy;  2023
+    <a class="link" href="https://example.com"
+      ></a
+    >
+    
+  </div>
+  <div class="flex basis-full lg:basis-1/2 lg:justify-end">
+    <a class="link mr-6 lg:ml-6" href="https://www.getzola.org/" rel="noopener" target="_blank"
+      >Powered by Zola</a
+    >
+    <a class="link" href="https://github.com/st1020/kita" rel="noopener" target="_blank">✎ Kita</a>
+  </div>
+</footer>
+
+  </body>
 </html>

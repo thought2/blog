@@ -1,15 +1,21 @@
 +++
-title = "A step by step guide to make foreign functions less foreign"
+title = "How to make PureScript's foreign Functions less foreign"
 slug = "purescript-ffi"
+insert_anchor_links = "heading"
+date = "2023-10-20"
+description = "Lorem Ipsum Dolor Si Amet"
 +++
 
-# A step by step guide to make foreign functions less foreign.
+{:page.toc}
 
 An article about the basics of PureScript's foreign function interface (FFI), how to improve type safety by using TypeScript and JSDoc annotations and the `ts-bridge` tool.
 
-## Most simple example for FFI: Import a value
+# Most simple example for FFI: Import a value
 
 Let's look at the most basic example of importing a foreign value from JavaScript into PureScript. On the PureScript side we use the `foreign import` syntax to declare a type for a value that will be provided by JavaScript. On the JavaScript side we export the actual implementation for this value.
+
+<img src="./simple.svg">
+
 
 _Main.purs:_
 
@@ -215,6 +221,8 @@ You can also configure a `tsconfig.json` file to make this work for the whole fo
 At this point the manual reviewing of the code became much easier and less error prone. We only need to check if the provided PureScript type signatures match up with the JSDoc annotations. We don't have to read every single line of the JavaScript code anymore to be confident that the types are correct.
 
 ## Statically check the contract by using `ts-bridge`
+
+<img src="./advanced.svg">
 
 For some users this might be enough. But if you want to go one step further and statically check the contract between PureScript and JavaScript you can use the `ts-bridge` tool. This library can generate TypeScript types from PureScript types. Let's see how it can be set up for our examples. 
 
