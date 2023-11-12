@@ -8,6 +8,10 @@ description = "Learn the basics PureScript's FFI and improve safety with type ch
 
 *Learn the basics PureScript's FFI and improve safety with type checked `JSDoc` and `ts-bridge`.*
 
+## Code Samples
+
+The final code that is explained in this blog post can be found in [this repo](https://github.com/thought2/ffi-less-foreign).
+
 ## Implicit contracts: Introduction to PureScript's foreign function interface (FFI)
 
 ### The perils of importing values from JavaScript

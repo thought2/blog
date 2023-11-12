@@ -143,6 +143,13 @@
         <ul>
           
           <li>
+            <a class="no-underline hover:underline" href="https://thought2.github.io/blog/purescript-ffi/#code-samples"
+              >Code Samples</a
+            >
+            
+          </li>
+          
+          <li>
             <a class="no-underline hover:underline" href="https://thought2.github.io/blog/purescript-ffi/#implicit-contracts-introduction-to-purescript-s-foreign-function-interface-ffi"
               >Implicit contracts: Introduction to PureScript&#x27;s foreign function interface (FFI)</a
             >
@@ -205,7 +212,9 @@
   </div>
   
 
-  <section><p><em>Learn the basics PureScript's FFI and how to improve safety with type checked <code>JSDoc</code> and <code>ts-bridge</code>.</em></p>
+  <section><p><em>Learn the basics PureScript's FFI and improve safety with type checked <code>JSDoc</code> and <code>ts-bridge</code>.</em></p>
+<h2 id="code-samples">Code Samples</h2>
+<p>The final code that is explained in this blog post can be found in <a href="https://github.com/thought2/ffi-less-foreign">this repo</a>.</p>
 <h2 id="implicit-contracts-introduction-to-purescript-s-foreign-function-interface-ffi">Implicit contracts: Introduction to PureScript's foreign function interface (FFI)</h2>
 <h3 id="the-perils-of-importing-values-from-javascript">The perils of importing values from JavaScript</h3>
 <p>Let's look at the most basic example of importing a foreign value from JavaScript into a PureScript module. On the PureScript side we use the <code>foreign import</code> syntax to declare a type for a value that will be provided by JavaScript. On the JavaScript side we export the actual implementation for this value:</p>
